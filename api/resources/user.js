@@ -1,7 +1,10 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'update', 'self'])
-class User extends Resource {}
+@Operations(OPS.FIND_ONE, OPS.UPDATE)
+class User extends Resource {
+
+  //need to add self function
+}
 
 export default User;

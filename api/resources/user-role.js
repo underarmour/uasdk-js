@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'delete'])
+@Operations(OPS.FIND_ONE, OPS.DELETE)
 class UserRole extends Resource {}
 
 export default UserRole;

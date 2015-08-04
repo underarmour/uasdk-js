@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['delete', 'find', 'get'])
+@Operations(OPS.FIND_ONE, OPS.DELETE, OPS.FIND)
 class Gear extends Resource {
 
   findByCriteria (brandVal, queryVal) {
@@ -10,7 +10,7 @@ class Gear extends Resource {
       query: queryVal
     });
   }
-  
+
 }
 
 export default Gear;

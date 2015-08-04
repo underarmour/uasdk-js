@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'find'])
+@Operations(OPS.DELETE, OPS.CREATE, OPS.FIND)
 class RouteBookmark extends Resource {
 
   findByUserId (id) {

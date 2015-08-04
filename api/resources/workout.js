@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get', 'find'])
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND)
 class Workout extends Resource {
 
   findForUser (data) {
@@ -12,7 +12,7 @@ class Workout extends Resource {
       user: data.user
     });
   }
-  
+
 }
 
 export default Workout;

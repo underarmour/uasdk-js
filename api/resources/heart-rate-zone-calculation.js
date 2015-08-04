@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['find'])
+@Operations(OPS.FIND)
 class HeartRateZoneCalculation extends Resource {
 
   findByMaxHR (maxHeartRate) {

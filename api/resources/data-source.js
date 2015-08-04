@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get', 'find', 'update'])
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND, OPS.UPDATE)
 class DataSource extends Resource {
 
   findByDevice (dev) {

@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'get', 'find'])
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.DELETE, OPS.FIND)
 class GroupInvite extends Resource {
 
   findGroupByCriteria (groupId, userId) {

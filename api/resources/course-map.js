@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get'])
+@Operations(OPS.FIND_ONE)
 class CourseMap extends Resource {}
 
 export default CourseMap;

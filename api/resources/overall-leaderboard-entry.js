@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'list'])
+@Operations(OPS.FIND_ONE, OPS.FIND_ALL)
 class OverallLeaderboardEntry extends Resource {
 
   findByCriteria (data) {
@@ -14,8 +14,6 @@ class OverallLeaderboardEntry extends Resource {
       year: data.year
     });
   }
-
-  //same for findById
 
 }
 

@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'find'])
+@Operations(OPS.FIND_ONE, OPS.FIND)
 class Course extends Resource {
 
   findByCriteria (data) {

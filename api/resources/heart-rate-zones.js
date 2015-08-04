@@ -1,7 +1,7 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get'])
+@Operations(OPS.FIND_ONE, OPS.CREATE)
 class HeartRateZones extends Resource {}
 
 export default HeartRateZones;
