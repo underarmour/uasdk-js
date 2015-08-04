@@ -1,0 +1,52 @@
+{
+  "name": "uacf-sdk",
+  "version": "0.0.1",
+  "homepage": "https://developer.underarmour.com",
+  "description": "A Node.js wrapper for UACF's API",
+  "author": "UACF",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "restler": "~3.2.0",
+    "promise": "~5.0.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "src",
+      "data-cover-never": "node_modules"
+    }
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.7",
+    "coveralls": "^2.11.2",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-simple-mocha": "0.4.x",
+    "mocha": "~1.20.1",
+    "mocha-lcov-reporter": "0.0.2",
+    "mockery": "^1.4.0",
+    "should": "~3.0",
+    "sinon": "~1.12.2",
+    "xunit-file": "0.0.5"
+  },
+  "keywords": [
+    "under",
+    "armour",
+    "connected",
+    "fitness",
+    "workout",
+    "api",
+    "wrapper",
+    "client",
+    "web api",
+    "sports",
+    "athlete"
+  ]
+}

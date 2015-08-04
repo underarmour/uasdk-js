@@ -1,0 +1,90 @@
+import uacf from '../uacf';
+import Achievement from './api/resources/achievement';
+import ActivityType from './api/resources/activity-type';
+import Aggregate from './api/resources/aggregate';
+import AlldayActivity from './api/resources/allday-activity';
+import Bodymass from './api/resources/bodymass';
+import Course from './api/resources/course';
+import CourseHistory from './api/resources/course-history';
+import CourseLeaderboard from './api/resources/course-leaderboard';
+import CourseMap from './api/resources/course-map';
+import DataSource from './api/resources/data-source';
+import DataSourcePriority from './api/resources/data-source-priority';
+import Gear from './api/resources/gear';
+import Group from './api/resources/group';
+import GroupInvite from './api/resources/group-invite';
+import GroupLeaderboard from './api/resources/group-leaderboard';
+import GroupPurpose from './api/resources/group-purpose';
+import GroupUser from './api/resources/group-user';
+import HeartRateZones from './api/resources/heart-rate-zones';
+import HeartRateZoneCalculation from './api/resources/heart-rate-zone-calculation';
+import MapMarkerImage from './api/resources/map-marker-image';
+import Membership from './api/resources/membership';
+import OverallLeaderboardEntry from './api/resources/overall-leaderboard-entry';
+import Page from './api/resources/page';
+import PageHistory from './api/resources/page-history';
+import PageLeaderboard from './api/resources/page-leaderboard';
+import PageMap from './api/resources/page-map';
+import Privacy from './api/resources/privacy';
+import Remoteconnection from './api/resources/remoteconnection';
+import Remoteconnectiontype from './api/resources/remoteconnectiontype';
+import Route from './api/resources/route';
+import RouteBookmark from './api/resources/route-bookmark';
+import Sleep from './api/resources/sleep';
+import User from './api/resources/user'
+import UserAchievement from './api/resources/user-achievement';
+import Usergear from './api/resources/usergear';
+import UserProfilePhoto from './api/resources/user-profile-photo';
+import UserRole from './api/resources/user-role';
+import UserStats from './api/resources/user-stats';
+import Webhook from './api/resources/webhook';
+import Workout from './api/resources/workout';
+import WorkoutHeartRate from './api/resources/workout-heart-rate';
+
+export default {
+  achievement: new Achievement('v7.1', 'achievement'), //WORKS
+  activityType: new ActivityType('v7.1', 'activity_type'),
+  aggregate: new Aggregate('v7.1', 'aggregate'),
+  alldayActivity: new AlldayActivity('v7.1', 'allday_activity'),
+  bodymass: new Bodymass('v7.1', 'bodymass'),
+  course: new Course('v7.1', 'course'),
+  courseHistory: new CourseHistory('api/0.1', 'course_history'),
+  courseLeaderboard: new CourseLeaderboard('api/0.1', 'course_leaderboard'),
+  courseMap: new CourseMap('api/0.1', 'course-map'),
+  dataSource: new DataSource('v7.1', 'data_source'),
+  dataSourcePriority: new DataSourcePriority('v7.1', 'data_source_priority'),
+  gear: new Gear('v7.1', 'gear'),
+  group: new Group('v7.1', 'group'),
+  groupInvite: new GroupInvite('v7.1', 'group_invite'),
+  groupLeaderboard: new GroupLeaderboard('v7.1', 'group_leaderboard'),
+  groupPurpose: new GroupPurpose('v7.1', 'group_purpose'),
+  groupUser: new GroupUser('v7.1', 'group_user'),
+  heartRateZones: new HeartRateZones('v7.1', 'heart_rate_zones'),
+  heartRateZoneCalculation: new HeartRateZoneCalculation('v7.1', 'heart_rate_zone_calculation'),
+  mapMarkerImage: new MapMarkerImage('v7.1', 'map_marker_image'),
+  membership: new Membership('v7.1', 'membership'),
+  overallLeaderboardEntry: new OverallLeaderboardEntry('v7.1', 'overall_leaderboard_entry'),
+  page: new Page('v7.1', 'page'),
+  pageHistory: new PageHistory('api/0.1', 'page_history'),
+  pageLeaderboard: new PageLeaderboard('api/0.1', 'page_leaderboard'),
+  pageMap: new PageMap('api/0.1', 'page_map'),
+  privacy: new Privacy('v7.1', 'privacy_option'),
+  remoteconnection: new Remoteconnection('v7.1', 'remoteconnection'),
+  remoteconnectiontype: new Remoteconnectiontype('v7.1', 'remoteconnectiontype'),
+  route: new Route('v7.1', 'route'),
+  routeBookmark: new RouteBookmark('v7.1', 'route_bookmark'),
+  sleep: new Sleep('v7.1', 'sleep'),
+  user: new User('v7.1', 'user'),
+  userAchievement: new UserAchievement('v7.1', 'user_achievement'),
+  usergear: new Usergear('v7.1', 'usergear'),
+  userProfilePhoto: new UserProfilePhoto('v7.1', 'user_profile_photo'),
+  userRole: new UserRole('v7.1', 'user_role'),
+  userStats: new UserStats('v7.1', 'user_stats'),
+  webhook: new Webhook('v7.1', 'webhook'),
+  workout: new Workout('v7.1', 'workout'),
+  workoutHeartRate: new WorkoutHeartRate('v7.1', 'workout_heart_rate'),
+  credentials: uacf
+};
+
+
+//nodemon --exec npm run start
