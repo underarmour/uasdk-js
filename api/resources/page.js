@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE, OPS.FIND)
-class Page extends Resource {
+export default class Page extends Resource {
 
   findByCriteria (pageVal, routeVal, workoutVal) {
     return this.find ({
@@ -16,6 +16,4 @@ class Page extends Resource {
     return this.findOne(alias);
   }
 
-}
-
-export default Page;
+};

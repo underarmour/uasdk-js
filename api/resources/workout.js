@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND)
-class Workout extends Resource {
+export default class Workout extends Resource {
 
   findForUser (data) {
     return this.find({
@@ -13,6 +13,4 @@ class Workout extends Resource {
     });
   }
 
-}
-
-export default Workout;
+};

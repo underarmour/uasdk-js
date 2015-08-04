@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND)
-class DataSourcePriority extends Resource {
+export default class DataSourcePriority extends Resource {
 
   findByCriteria (filter, type) {
     return this.find({
@@ -11,6 +11,4 @@ class DataSourcePriority extends Resource {
     });
   }
 
-}
-
-export default DataSourcePriority;
+};

@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE, OPS.CREATE, OPS.DELETE, OPS.FIND, OPS.UPDATE)
-class Route extends Resource {
+export default class Route extends Resource {
 
   findRoutes (minDistance, maxDistance, location) {
     return this.find({
@@ -16,6 +16,4 @@ class Route extends Resource {
     return this.find({user: id});
   }
 
-}
-
-export default Route;
+};

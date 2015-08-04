@@ -1,7 +1,7 @@
 class Resource {
   constructor (version, uri) {
-    this.version = {'version' :version};
-    this.uri = {'uri' : uri};
+    this.version = {version};
+    this.uri = {uri};
   }
 }
 

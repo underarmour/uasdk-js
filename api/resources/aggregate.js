@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND)
-class Aggregate extends Resource {
+export default class Aggregate extends Resource {
 
   find (data) {
     return this.find({
@@ -14,6 +14,4 @@ class Aggregate extends Resource {
     });
   }
 
-}
-
-export default Aggregate;
+};

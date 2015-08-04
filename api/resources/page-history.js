@@ -2,7 +2,7 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE)
-class PageHistory extends Resource {
+export default class PageHistory extends Resource {
 
   findByCriteria (pageId, userId, activityTypeId) {
     let id = pageId.toString() + userId.toString();
@@ -11,6 +11,4 @@ class PageHistory extends Resource {
     });
   }
 
-}
-
-export default PageHistory;
+};

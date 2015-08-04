@@ -4,7 +4,7 @@ import find from './find';
 
 function findOne (id, params = {}) {
   if (id === null || typeof id === 'undefined') { throw new Error('id required'); }
-  return find(Object.assign({}, params, id, this.uri, this.version));
+  return find(Object.assign(params, id, this.uri, this.version));
 }
 
 export default findOne;

@@ -2,7 +2,8 @@ import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
 @Operations(OPS.FIND_ONE, OPS.CREATE, OPS.DELETE, OPS.FIND)
-class GroupInvite extends Resource {
+
+export default class GroupInvite extends Resource {
 
   findGroupByCriteria (groupId, userId) {
     return this.find({
@@ -11,6 +12,4 @@ class GroupInvite extends Resource {
     });
   }
 
-}
-
-export default GroupInvite;
+};
