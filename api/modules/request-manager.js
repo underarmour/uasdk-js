@@ -1,5 +1,5 @@
 import WebApiRequest from '../webapi-request';
-import uacf from '../../../uacf';
+import uacf from './api';
 import HttpManager from '../http-manager';
 
 function _prepareRequest (options, method) {

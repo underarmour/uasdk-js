@@ -20,15 +20,17 @@
     }
   },
   "scripts": {
-    "test": "mocha --require ./mocha-babel --timeout 5s",
+    "test": "mocha --recursive --require ./mocha-babel --timeout 5s",
     "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {
+    "babel": "^5.8.21",
     "blanket": "^1.1.7",
     "coveralls": "^2.11.2",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.6",
     "grunt-simple-mocha": "0.4.x",
+    "iso8601": "^1.1.1",
     "mocha": "~1.20.1",
     "mocha-lcov-reporter": "0.0.2",
     "mockery": "^1.4.0",

@@ -1,4 +1,4 @@
-import uacf from '../uacf';
+import uacf from './api/modules/api';
 import Achievement from './api/resources/achievement';
 import ActivityType from './api/resources/activity-type';
 import Aggregate from './api/resources/aggregate';
