@@ -18,17 +18,18 @@ function _prepareRequest (options, method) {
     request.addHeaders(options.group);
   }
 
-  if (options.params) {
-    if (method === HttpManager.get)
-      request.addQueryParameters(options.params);
-    else
-      request.addBodyParameters(options.params);
+  for (var property in options) {
+    if (options.hasOwnProperty(property)) {
+      if ((property !== 'id') || (property !== 'group') || (property !== 'version') || (property !== 'uri')) {
+        if (method === HttpManager.get){
+          request.addQueryParameter(property, options[property]);
+        }
+        else {
+          request.addBodyParamete(property, options[property]);
+        }
+      }
+    }
   }
-
-  if (options.body) {
-    request.addBodyParameters(options.body);
-  }
-  console.log(request);
   return request;
 }
 

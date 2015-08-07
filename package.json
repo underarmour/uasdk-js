@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
+    "test": "mocha --require ./mocha-babel --timeout 5s",
     "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {
