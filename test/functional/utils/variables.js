@@ -11,3 +11,10 @@ export var startDate = sDate;
 
 export var userId = 70488025;
 export var groupId = 138872;
+export var groupUserId = 3295821;
+export var courseId = 1521816;
+export var personalGroupId = 475811;
+export var closeToLoc = '30.2688,-97.7489';
+export var routeId = 779278169;
+export var usergearId = 47053;
+export var workoutId = 1062123831;

@@ -20,15 +20,16 @@ function _prepareRequest (options, method) {
 
   for (var property in options) {
     if (options.hasOwnProperty(property)) {
-      if ((property !== 'id') || (property !== 'group') || (property !== 'version') || (property !== 'uri')) {
+      if ((property !== 'id') && (property !== 'group') && (property !== 'version') && (property !== 'uri')) {
         if (method === HttpManager.get){
           request.addQueryParameter(property, options[property]);
         }
-        else {
-          request.addBodyParamete(property, options[property]);
-        }
       }
     }
+  }
+
+  if (options.params && ((method === HttpManager.put) || (method === HttpManager.post))) {
+    request.addQueryParameters(options.params);
   }
   return request;
 }

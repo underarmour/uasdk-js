@@ -6,6 +6,7 @@ export default class MapMarkerImage extends Resource {
 
   findByText (textVal) {
     return this.find({
+      id: '0',
       format: 'json',
       text: textVal
     });

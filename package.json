@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "test": "mocha --recursive --require ./mocha-babel --timeout 5s",
+    "test": "mocha --reporter nyan --recursive --require ./mocha-babel --timeout 10s",
     "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {

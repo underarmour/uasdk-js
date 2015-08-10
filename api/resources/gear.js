@@ -4,9 +4,14 @@ import Resource from '../modules/resource';
 @Operations(OPS.FIND_ONE, OPS.DELETE, OPS.FIND)
 export default class Gear extends Resource {
 
-  findByCriteria (brandVal, queryVal) {
+  findByBrand (brandName) {
     return this.find({
-      brand: brandVal,
+      brand: brandName
+    });
+  }
+
+  findByTerms (queryVal) {
+    return this.find({
       query: queryVal
     });
   }

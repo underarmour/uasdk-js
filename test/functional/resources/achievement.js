@@ -8,7 +8,6 @@ describe('Achievement', () => {
       return api.achievement
         .findOne(3)
         .then((data) => {
-          console.log('data', data);
           assert.equal(200, data.statusCode);
         });
     });

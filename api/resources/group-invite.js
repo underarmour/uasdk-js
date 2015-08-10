@@ -5,7 +5,7 @@ import Resource from '../modules/resource';
 
 export default class GroupInvite extends Resource {
 
-  findGroupByCriteria (groupId, userId) {
+  findByCriteria (groupId, userId) {
     return this.find({
       group_id: groupId,
       user_id: userId
