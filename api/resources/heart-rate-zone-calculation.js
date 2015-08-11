@@ -8,8 +8,8 @@ export default class HeartRateZoneCalculation extends Resource {
     return this.find({max_hr: maxHeartRate});
   }
 
-  findByAge (ageValue) {
-    return this.find({age: ageValue});
+  findByAge (age) {
+    return this.find({age});
   }
 
 };

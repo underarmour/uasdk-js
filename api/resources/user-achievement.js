@@ -4,8 +4,8 @@ import Resource from '../modules/resource';
 @Operations(OPS.FIND)
 export default class UserAchievement extends Resource {
 
-  findOne (id) {
-    return this.find({user: id});
+  findOne (user) {
+    return this.find({user});
   }
 
 };
