@@ -1,5 +1,5 @@
 import restler from 'restler';
-import WebApiError from './errors/webapiRequest';
+import WebApiError from '../errors/webapi';
 
 var HttpManager = {};
 
@@ -45,7 +45,6 @@ var _getErrorObject = function(defaultMessage, err) {
 
 /* Make the request to the Web API */
 HttpManager._makeRequest = function(method, options, uri, callback) {
-
   method(uri, options)
     .on('success', function(data, response) {
       callback(null, { 'body' : data, 'headers': response.headers, 'statusCode' : response.statusCode });

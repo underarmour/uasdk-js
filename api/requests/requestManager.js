@@ -3,7 +3,7 @@ import uacf from '../modules/api';
 import HttpManager from './httpManager';
 
 function _prepareRequest (options, method) {
-  let request = WebApiRequest.builder()
+  let request = WebApiRequest()
     .withPath(options.version + '/' + options.uri +'/')
     .withHeaders({
       'Content-Type' : 'application/json',

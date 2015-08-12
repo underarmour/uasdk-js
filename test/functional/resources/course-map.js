@@ -1,4 +1,4 @@
-import api from '../../../';
+import {API_0_1 as api} from '../../../';
 import assert from 'assert';
 import * as vars from '../utils/variables';
 

@@ -19,7 +19,7 @@ class Request {
   getBodyParameters () { return this.bodyParameters }
   getHeaders () { return this.headers }
 
-  setPath () { this.path = path }
+  setPath (path) { this.path = path }
 
   getURI () {
     if (!this.scheme || !this.host || !this.port) {
@@ -147,6 +147,6 @@ class Builder {
 
 }
 
-export default function builder () {
+export default function () {
   return new Builder();
 };
