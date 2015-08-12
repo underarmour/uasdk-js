@@ -1,11 +1,9 @@
-'use strict';
-
-function WebapiError(message, statusCode) {
-  this.name = 'WebapiError';
-  this.message = (message || '');
-  this.statusCode = statusCode;
+export default class WebapiError extends Error {
+  constructor (message = '', statusCode) {
+    super();
+    this.name = this.constructor.name;
+    this.message = message;
+    this.statusCode = statusCode;
+    this.stack = (new Error()).stack;
+  }
 }
-
-WebapiError.prototype = Error.prototype;
-
-module.exports = WebapiError;

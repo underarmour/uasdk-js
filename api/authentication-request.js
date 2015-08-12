@@ -6,7 +6,7 @@ const DEFAULT_SCHEME = 'https';
 
 export default builder = function () {
   return Request.builder()
-      .withHost(DEFAULT_HOST)
-      .withPort(DEFAULT_PORT)
-      .withScheme(DEFAULT_SCHEME);
+    .withHost(DEFAULT_HOST)
+    .withPort(DEFAULT_PORT)
+    .withScheme(DEFAULT_SCHEME);
 }
