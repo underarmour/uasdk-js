@@ -1,4 +1,4 @@
-import Request from './base-request';
+import Request from './baseRequest';
 
 const DEFAULT_HOST = 'api.ua.com/';
 const DEFAULT_PORT = 443;

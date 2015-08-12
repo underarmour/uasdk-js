@@ -1,5 +1,5 @@
 import restler from 'restler';
-import WebApiError from './webapi-error';
+import WebApiError from './errors/webapiRequest';
 
 var HttpManager = {};
 

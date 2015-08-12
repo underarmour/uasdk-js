@@ -1,4 +1,4 @@
-export default class WebapiError extends Error {
+export default class WebApiError extends Error {
   constructor (message = '', statusCode) {
     super();
     this.name = this.constructor.name;

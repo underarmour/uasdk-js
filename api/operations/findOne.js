@@ -1,5 +1,5 @@
-import HttpManager from '../http-manager';
-import performRequest from '../modules/request-manager';
+import HttpManager from '../requests/httpManager';
+import performRequest from '../requests/requestManager';
 import find from './find';
 
 function findOne (id, params = {}) {
