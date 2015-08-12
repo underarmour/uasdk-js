@@ -147,6 +147,6 @@ class Builder {
 
 }
 
-export default builder = function () {
+export default function builder () {
   return new Builder();
 };

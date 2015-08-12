@@ -1,5 +1,3 @@
-import AuthenticationRequest from '../authentication-request';
-import WebApiRequest from '../webapi-request';
 import PromiseImpl from 'promise';
 
 class UACF {
