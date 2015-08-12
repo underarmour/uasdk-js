@@ -1,14 +1,12 @@
-'use strict';
+import Request from './base-request';
 
-var Request = require('./base-request');
+const DEFAULT_HOST = 'api.ua.com/';
+const DEFAULT_PORT = 443;
+const DEFAULT_SCHEME = 'https';
 
-var DEFAULT_HOST = 'api.ua.com/',
-    DEFAULT_PORT = 443,
-    DEFAULT_SCHEME = 'https';
-
-module.exports.builder = function() {
+export default builder = function () {
   return Request.builder()
       .withHost(DEFAULT_HOST)
       .withPort(DEFAULT_PORT)
       .withScheme(DEFAULT_SCHEME);
-};
+}
