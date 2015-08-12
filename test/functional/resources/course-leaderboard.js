@@ -6,7 +6,7 @@ describe('Course Leaderboard', () => {
   describe('#findByCriteria()', () => {
     it('Should return a 200 response' , () => {
       return api.courseLeaderboard
-        .findByCriteria(vars.courseId, 3)
+        .findByActivityType(vars.courseId, 3)
         .then((data) => {
           assert.equal(200, data.statusCode);
         });

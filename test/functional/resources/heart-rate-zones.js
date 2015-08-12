@@ -6,7 +6,7 @@ describe('Heart Rate Zones', () => {
   describe('#findOne()', () => {
     it('Should return a 200 response' , () => {
       return api.heartRateZones
-        .findOne(10)
+        .findOne(103)
         .then((data) => {
           assert.equal(200, data.statusCode);
         });

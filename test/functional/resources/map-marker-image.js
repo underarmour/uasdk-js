@@ -14,10 +14,10 @@ describe('Map Marker Image', () => {
   });
 
   describe('Map Marker Image', () => {
-    describe('#findByIds()', () => {
+    describe('#findByList()', () => {
       it('Should return a 200 response' , () => {
         return api.mapMarkerImage
-          .findByIds([2,3,4])
+          .findByList([2,3,4])
           .then((data) => {
             assert.equal(200, data.statusCode);
           });

@@ -3,10 +3,14 @@ import assert from 'assert';
 import * as vars from '../utils/variables';
 
 describe('Route', () => {
-  describe('#findRoutes()', () => {
+  describe('#find()', () => {
     it('Should return a 200 response' , () => {
       return api.route
-        .findRoutes(1, 5000, vars.closeToLoc)
+        .find({
+          minimum_distance: 1,
+          maximum_distance: 5000,
+          close_to_location: vars.closeToLoc
+        })
         .then((data) => {
           assert.equal(200, data.statusCode);
         });
@@ -23,10 +27,10 @@ describe('Route', () => {
     });
   });
 
-  describe('#findByUserId()', () => {
+  describe('#findByUser()', () => {
     it('Should return a 200 response' , () => {
       return api.route
-        .findByUserId(vars.userId)
+        .findByUser(vars.userId)
         .then((data) => {
           assert.equal(200, data.statusCode);
         });

@@ -3,10 +3,13 @@ import assert from 'assert';
 import * as vars from '../utils/variables';
 
 describe('Group Leaderboard', () => {
-  describe('#findByCriteria()', () => {
+  describe('#find()', () => {
     it('Should return a 200 response' , () => {
       return api.groupLeaderboard
-        .findByCriteria(vars.personalGroupId, 1)
+        .find({
+          group_id: vars.personalGroupId,
+          iteration: 1
+        })
         .then((data) => {
           assert.equal(200, data.statusCode);
         });

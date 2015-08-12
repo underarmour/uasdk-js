@@ -5,7 +5,7 @@ import * as vars from '../utils/variables';
 describe('Data Source Priority', () => {
   describe('#findOne()', () => {
     it('Should return a 200 response' , () => {
-      return api.activityType
+      return api.dataSourcePriority
         .findOne(2)
         .then((data) => {
           assert.equal(200, data.statusCode);
@@ -16,7 +16,7 @@ describe('Data Source Priority', () => {
   describe('#findAll()', () => {
     it('Should return a 200 response' , () => {
       return api.dataSourcePriority
-        .findByCriteria()
+        .findAll()
         .then((data) => {
           assert.equal(200, data.statusCode);
         });
