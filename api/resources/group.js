@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'get', 'list', 'replace', 'update'])
-class Group extends Resource {}
-
-export default Group;
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND_ALL, OPS.UPDATE, OPS.DELETE, OPS.FIND)
+export default class Group extends Resource {}

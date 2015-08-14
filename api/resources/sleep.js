@@ -1,16 +1,14 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'get', 'find', 'update'])
-class Sleep extends Resource {
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.DELETE, OPS.FIND, OPS.UPDATE)
+export default class Sleep extends Resource {
 
-  findForDateRange (startTime, endTime) {
+  findByPeriod (start, end) {
     return this.find({
-      target_end_datetime: endTime,
-      target_start_datetime: startTime
+      target_end_datetime: end,
+      target_start_datetime: start
     });
   }
 
-}
-
-export default Sleep;
+};

@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'list'])
-class Privacy extends Resource {}
-
-export default Privacy;
+@Operations(OPS.FIND_ONE, OPS.FIND_ALL)
+export default class Privacy extends Resource {};

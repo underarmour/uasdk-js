@@ -1,21 +1,23 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'find'])
-class Page extends Resource {
+@Operations(OPS.FIND_ONE, OPS.FIND)
+export default class Page extends Resource {
 
-  findByCriteria (pageVal, routeVal, workoutVal) {
-    return this.find ({
-      page: pageVal,
-      route: routeVal,
-      workout: workoutVal
-    });
+  findByPage (page) {
+    return this.find({page});
+  }
+
+  findByRoute (route) {
+    return this.find({route});
+  }
+
+  findByWorkout (workout) {
+    return this.find({workout});
   }
 
   findByAlias (alias) {
-    return this.findById(alias);
+    return this.findOne({alias});
   }
 
-}
-
-export default Page;
+};

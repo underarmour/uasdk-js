@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'update'])
-class UserProfilePhoto extends Resource {}
-
-export default UserProfilePhoto;
+@Operations(OPS.FIND_ONE)
+export default class UserProfilePhoto extends Resource {};

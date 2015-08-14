@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get'])
-class PageMap extends Resource {}
-
-export default PageMap;
+@Operations(OPS.FIND_ONE)
+export default class PageMap extends Resource {};

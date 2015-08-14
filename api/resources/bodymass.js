@@ -1,7 +1,13 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'create', 'list', 'update'])
-class Bodymass extends Resource {}
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.UPDATE, OPS.FIND)
+export default class Bodymass extends Resource {
 
-export default Bodymass;
+  findByPeriod (start, end) {
+    return this.find({
+      target_end_datetime: end,
+      target_start_datetime: start
+    });
+  }
+};

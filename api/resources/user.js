@@ -1,7 +1,9 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'update', 'self'])
-class User extends Resource {}
+@Operations(OPS.FIND_ONE, OPS.UPDATE)
+export default class User extends Resource {
 
-export default User;
+  self () {return this.findOne('self');}
+  
+};

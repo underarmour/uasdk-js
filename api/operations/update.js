@@ -1,12 +1,8 @@
-import HttpManager from '../http-manager';
-import performRequest from '../modules/request-manager';
+import HttpManager from '../requests/httpManager';
+import performRequest from '../requests/requestManager';
 
-function update (id, parameters) {
-  let options = Object.assign({
-    'id' : id,
-    'params' : parameters
-  }, this.uri, this.version);
-  return performRequest(HttpManager.put, options);
+function update (id, params = {}) {
+  return performRequest(HttpManager.put, Object.assign({params}, {id}, this.uri, this.version));
 }
 
 export default update;

@@ -1,16 +1,15 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['delete', 'find', 'get'])
-class Gear extends Resource {
+@Operations(OPS.FIND_ONE, OPS.DELETE, OPS.FIND)
+export default class Gear extends Resource {
 
-  findByCriteria (brandVal, queryVal) {
-    return this.find({
-      brand: brandVal,
-      query: queryVal
-    });
+  findByBrand (brand) {
+    return this.find({brand});
   }
-  
-}
 
-export default Gear;
+  findByTerms (query) {
+    return this.find({query});
+  }
+
+};

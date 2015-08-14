@@ -1,17 +1,15 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['find'])
-class HeartRateZoneCalculation extends Resource {
+@Operations(OPS.FIND)
+export default class HeartRateZoneCalculation extends Resource {
 
   findByMaxHR (maxHeartRate) {
     return this.find({max_hr: maxHeartRate});
   }
 
-  findByAge (ageValue) {
-    return this.find({age: ageValue});
+  findByAge (age) {
+    return this.find({age});
   }
 
-}
-
-export default HeartRateZoneCalculation;
+};

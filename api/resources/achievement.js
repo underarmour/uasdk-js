@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get'])
-class Achievement extends Resource {}
-
-export default Achievement;
+@Operations(OPS.FIND_ONE)
+export default class Achievement extends Resource {};

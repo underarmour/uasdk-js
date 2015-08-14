@@ -1,13 +1,11 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['find'])
-class UserAchievement extends Resource {
+@Operations(OPS.FIND)
+export default class UserAchievement extends Resource {
 
-  findByUserId (id) {
-    return this.find({user: id});
+  findOne (user) {
+    return this.find({user});
   }
 
-}
-
-export default UserAchievement;
+};

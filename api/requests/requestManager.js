@@ -1,9 +1,9 @@
-import WebApiRequest from '../webapi-request';
-import uacf from '../../../uacf';
-import HttpManager from '../http-manager';
+import WebApiRequest from './webapiRequest';
+import uacf from '../modules/api';
+import HttpManager from './httpManager';
 
 function _prepareRequest (options, method) {
-  let request = WebApiRequest.builder()
+  let request = WebApiRequest()
     .withPath(options.version + '/' + options.uri +'/')
     .withHeaders({
       'Content-Type' : 'application/json',
@@ -18,17 +18,19 @@ function _prepareRequest (options, method) {
     request.addHeaders(options.group);
   }
 
-  if (options.params) {
-    if (method === HttpManager.get)
-      request.addQueryParameters(options.params);
-    else
-      request.addBodyParameters(options.params);
+  for (var property in options) {
+    if (options.hasOwnProperty(property)) {
+      if ((property !== 'id') && (property !== 'group') && (property !== 'version') && (property !== 'uri')) {
+        if (method === HttpManager.get){
+          request.addQueryParameter(property, options[property]);
+        }
+      }
+    }
   }
 
-  if (options.body) {
-    request.addBodyParameters(options.body);
+  if (options.params && ((method === HttpManager.put) || (method === HttpManager.post))) {
+    request.addQueryParameters(options.params);
   }
-  console.log(request);
   return request;
 }
 

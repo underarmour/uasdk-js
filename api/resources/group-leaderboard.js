@@ -1,16 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['find'])
-class GroupLeaderboard extends Resource {
-
-  findByCriteria (groupId, iterationVal) {
-    return this.find({
-      group_id: groupId,
-      iteration: iterationVal
-    });
-  }
-
-}
-
-export default GroupLeaderboard;
+@Operations(OPS.FIND)
+export default class GroupLeaderboard extends Resource {};

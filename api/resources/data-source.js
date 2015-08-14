@@ -1,13 +1,11 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get', 'find', 'update'])
-class DataSource extends Resource {
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND, OPS.UPDATE)
+export default class DataSource extends Resource {
 
-  findByDevice (dev) {
-    return this.find({device: dev});
+  findByDevice (device) {
+    return this.find({device});
   }
 
-}
-
-export default DataSource;
+};

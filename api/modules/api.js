@@ -1,11 +1,4 @@
-'use strict';
-
-// Dependencies
-import AuthenticationRequest from '../authentication-request';
-import WebApiRequest from '../webapi-request';
 import PromiseImpl from 'promise';
-import iso8601 from 'iso8601';
-
 
 class UACF {
   constructor(credentials) {
@@ -153,4 +146,11 @@ class UACF {
 
 }
 
-export default UACF;
+let uacf = new UACF({
+  clientId: process.env.UACF_CLIENT_ID,
+  clientSecret: process.env.UACF_CLIENT_SECRET,
+  redirectUri: process.env.OAUTH_CALLBACK,
+  accessToken: process.env.UACF_ACCESS_TOKEN
+});
+
+export default uacf;

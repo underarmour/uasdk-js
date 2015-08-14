@@ -1,13 +1,11 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'find'])
-class RouteBookmark extends Resource {
+@Operations(OPS.DELETE, OPS.CREATE, OPS.FIND)
+export default class RouteBookmark extends Resource {
 
-  findByUserId (id) {
-    return this.find({user: id});
+  findOne (user) {
+    return this.find({user});
   }
 
-}
-
-export default RouteBookmark;
+};

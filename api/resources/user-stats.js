@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get'])
-class UserStats extends Resource {}
-
-export default UserStats;
+@Operations(OPS.FIND_ONE)
+export default class UserStats extends Resource {};

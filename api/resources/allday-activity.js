@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get', 'create', 'list', 'update'])
-class AlldayActivity extends Resource {}
-
-export default AlldayActivity;
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.UPDATE, OPS.FIND)
+export default class AlldayActivity extends Resource {};

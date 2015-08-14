@@ -1,16 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get', 'find'])
-class DataSourcePriority extends Resource {
-
-  findByCriteria (filter, type) {
-    return this.find({
-      priority_filter: filter,
-      priority_type: type
-    });
-  }
-
-}
-
-export default DataSourcePriority;
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND, OPS.FIND_ALL)
+export default class DataSourcePriority extends Resource {};

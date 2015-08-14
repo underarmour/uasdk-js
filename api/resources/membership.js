@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['get'])
-class Membership extends Resource {}
-
-export default Membership;
+@Operations(OPS.FIND_ONE)
+export default class Membership extends Resource {};

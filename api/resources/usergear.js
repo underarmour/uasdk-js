@@ -1,7 +1,5 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'delete', 'get', 'list', 'update'])
-class Usergear extends Resource {}
-
-export default Usergear;
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.DELETE, OPS.FIND_ALL, OPS.UPDATE)
+export default class Usergear extends Resource {};

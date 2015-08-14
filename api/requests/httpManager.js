@@ -1,7 +1,5 @@
-'use strict';
-
-var restler = require('restler'),
-    WebApiError = require('./webapi-error');
+import restler from 'restler';
+import WebApiError from '../errors/webapi';
 
 var HttpManager = {};
 
@@ -47,7 +45,6 @@ var _getErrorObject = function(defaultMessage, err) {
 
 /* Make the request to the Web API */
 HttpManager._makeRequest = function(method, options, uri, callback) {
-
   method(uri, options)
     .on('success', function(data, response) {
       callback(null, { 'body' : data, 'headers': response.headers, 'statusCode' : response.statusCode });
@@ -81,7 +78,6 @@ HttpManager._makeRequest = function(method, options, uri, callback) {
 HttpManager.get = function(request, callback) {
   var options = _getParametersFromRequest(request);
   var method = restler.get;
-
   HttpManager._makeRequest(method, options, request.getURI(), callback);
 };
 
@@ -91,10 +87,8 @@ HttpManager.get = function(request, callback) {
  * @param {Function} The callback function.
  */
 HttpManager.post = function(request, callback) {
-
   var options = _getParametersFromRequest(request);
   var method = restler.post;
-
   HttpManager._makeRequest(method, options, request.getURI(), callback);
 };
 
@@ -104,10 +98,8 @@ HttpManager.post = function(request, callback) {
  * @param {Function} The callback function.
  */
 HttpManager.del = function(request, callback) {
-
   var options = _getParametersFromRequest(request);
   var method = restler.del;
-
   HttpManager._makeRequest(method, options, request.getURI(), callback);
 };
 
@@ -117,11 +109,9 @@ HttpManager.del = function(request, callback) {
  * @param {Function} The callback function.
  */
 HttpManager.put = function(request, callback) {
-
   var options = _getParametersFromRequest(request);
   var method = restler.put;
-
   HttpManager._makeRequest(method, options, request.getURI(), callback);
 };
 
-module.exports = HttpManager;
+export default HttpManager;

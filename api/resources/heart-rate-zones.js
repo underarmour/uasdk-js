@@ -1,7 +1,11 @@
-import Operations from '../modules/operations';
+import Operations, {OPS} from '../operations';
 import Resource from '../modules/resource';
 
-@Operations(['create', 'get'])
-class HeartRateZones extends Resource {}
+@Operations(OPS.FIND_ONE, OPS.CREATE, OPS.FIND)
+export default class HeartRateZones extends Resource {
 
-export default HeartRateZones;
+  findByUser (user) {
+    return this.find({user});
+  }
+
+};
