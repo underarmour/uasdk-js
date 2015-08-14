@@ -1,5 +1,3 @@
-import PromiseImpl from 'promise';
-
 class UACF {
   constructor(credentials) {
     this._credentials = credentials || {};
@@ -16,9 +14,7 @@ class UACF {
   }
 
   _addQueryParameters(request, options) {
-    if (!options) {
-      return;
-    }
+    if (!options) { return; }
     for (var key in options) {
       if (key !== 'credentials') {
         request.addQueryParameter(key, options[key]);
@@ -27,23 +23,20 @@ class UACF {
   }
 
   performRequest(request, method) {
-    var promiseFunction = function(resolve, reject) {
-      method(request, function(error, result) {
+    return new Promise((resolve, reject) => {
+      method(request, (error, result) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(result);
+          return;
         }
+        resolve(result);
       });
-    };
-    return new PromiseImpl(promiseFunction);
+    });
   }
 
   _addAccessToken(request, accessToken) {
     if (accessToken) {
-      request.addHeaders({
-        'Authorization' : 'Bearer ' + accessToken
-      });
+      request.addHeaders({'Authorization': `Bearer ${accessToken}`});
     }
   }
 
@@ -69,23 +62,17 @@ class UACF {
   }
 
   _getCredential(credentialKey) {
-    if (!this._credentials) {
-      return;
-    } else {
-      return this._credentials[credentialKey];
-    }
+    if (!this._credentials) { return; }
+    return this._credentials[credentialKey];
   }
 
   _resetCredential(credentialKey) {
-    if (!this._credentials) {
-      return;
-    } else {
-      this._credentials[credentialKey] = null;
-    }
+    if (!this._credentials) { return; }
+    this._credentials[credentialKey] = null;
   }
 
   setClientId (clientId) {
-    this._setCredential ('clientId', clientId);
+    this._setCredential('clientId', clientId);
   }
 
   setClientSecret (clientSecret) {

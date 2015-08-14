@@ -10,30 +10,15 @@
     "url": ""
   },
   "dependencies": {
-    "restler": "3.2.0",
-    "promise": "5.0.0"
-  },
-  "config": {
-    "blanket": {
-      "pattern": "src",
-      "data-cover-never": "node_modules"
-    }
+    "restler": "3.2.0"
   },
   "scripts": {
-    "test": "mocha --reporter list --recursive --require ./mocha-babel --timeout 10s",
-    "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "mocha --recursive --require ./mocha-babel --timeout 10s"
   },
   "devDependencies": {
     "babel": "5.8.21",
-    "blanket": "1.1.7",
-    "coveralls": "2.11.2",
-    "iso8601": "1.1.1",
     "mocha": "2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
-    "mockery": "1.4.0",
-    "should": "3.0",
-    "sinon": "1.12.2",
-    "xunit-file": "0.0.5"
+    "mocha-babel": "3.0.0"
   },
   "keywords": [
     "under",

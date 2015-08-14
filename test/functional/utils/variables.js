@@ -1,20 +1,16 @@
-import iso8601 from 'iso8601';
+let _endDate = new Date();
+let _startDate = new Date();
 
-var eDate = new Date();
-eDate = iso8601.fromDate(eDate);
-export var endDate = eDate;
+_startDate.setMonth(_startDate.getMonth() - 1);
 
-var sDate = new Date();
-sDate.setMonth(sDate.getMonth() - 1);
-sDate = iso8601.fromDate(sDate);
-export var startDate = sDate;
-
-export var userId = 70488025;
-export var groupId = 138872;
-export var groupUserId = 3295821;
-export var courseId = 1521816;
-export var personalGroupId = 475811;
-export var closeToLoc = '30.2688,-97.7489';
-export var routeId = 779278169;
-export var usergearId = 47053;
-export var workoutId = 1062123831;
+export let startDate = _startDate.toISOString();
+export let endDate = _endDate.toISOString();
+export let userId = 70488025;
+export let groupId = 138872;
+export let groupUserId = 3295821;
+export let courseId = 1521816;
+export let personalGroupId = 475811;
+export let closeToLoc = '30.2688,-97.7489';
+export let routeId = 779278169;
+export let usergearId = 47053;
+export let workoutId = 1062123831;
