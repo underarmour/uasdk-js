@@ -2,7 +2,7 @@
   "name": "uacf-sdk",
   "version": "0.0.1",
   "homepage": "https://developer.underarmour.com",
-  "description": "A Node.js wrapper for UACF's API",
+  "description": "A Node.js wrapper for the Under Armour Connected Fitness API",
   "author": "UACF",
   "license": "MIT",
   "repository": {

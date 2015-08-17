@@ -77,8 +77,7 @@ HttpManager._makeRequest = function (method, options, uri, callback) {
  */
 HttpManager.get = function(request, callback) {
   var options = _getParametersFromRequest(request);
-  var method = restler.get;
-  HttpManager._makeRequest(method, options, request.getURI(), callback);
+  HttpManager._makeRequest(restler.get, options, request.getURI(), callback);
 };
 
 /**
@@ -88,8 +87,7 @@ HttpManager.get = function(request, callback) {
  */
 HttpManager.post = function(request, callback) {
   var options = _getParametersFromRequest(request);
-  var method = restler.post;
-  HttpManager._makeRequest(method, options, request.getURI(), callback);
+  HttpManager._makeRequest(restler.post, options, request.getURI(), callback);
 };
 
 /**
@@ -99,8 +97,7 @@ HttpManager.post = function(request, callback) {
  */
 HttpManager.del = function(request, callback) {
   var options = _getParametersFromRequest(request);
-  var method = restler.del;
-  HttpManager._makeRequest(method, options, request.getURI(), callback);
+  HttpManager._makeRequest(restler.del, options, request.getURI(), callback);
 };
 
 /**
@@ -110,8 +107,7 @@ HttpManager.del = function(request, callback) {
  */
 HttpManager.put = function(request, callback) {
   var options = _getParametersFromRequest(request);
-  var method = restler.put;
-  HttpManager._makeRequest(method, options, request.getURI(), callback);
+  HttpManager._makeRequest(restler.put, options, request.getURI(), callback);
 };
 
 export default HttpManager;
