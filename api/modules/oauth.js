@@ -1,3 +1,0 @@
-class OAuth {
-  constructor () {}
-}

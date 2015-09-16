@@ -9,12 +9,18 @@ An SDK to wrap UA's Connected Fitness APIs.
 
 ## Usage
 
-    TODO
+```javascript
+var sdk = require('uacf-sdk');
+sdk.use(new sdk.strategies.OAuth2Strategy({
+  apiKey: '...',
+  accessToken: '...'
+});
 
-
-## Tests
-
-  `npm test`
+sdk.api_7_1.user.findOne(userId)
+  .then(function () {
+    ...
+  });
+```
 
 ## Contributing
 

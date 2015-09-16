@@ -1,6 +1,6 @@
 {
   "name": "uacf-sdk",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "homepage": "https://developer.underarmour.com",
   "description": "A Node.js wrapper for the Under Armour Connected Fitness API",
   "author": "UACF",
@@ -9,16 +9,14 @@
     "type": "git",
     "url": ""
   },
-  "dependencies": {
-    "restler": "3.2.0"
-  },
+  "main": "./dist/uasdk.js",
   "scripts": {
-    "test": "mocha --recursive --require ./mocha-babel --timeout 10s"
+    "bundle": "webpack --watch",
+    "test": "mocha --recursive --timeout 10s"
   },
   "devDependencies": {
-    "babel": "5.8.21",
     "mocha": "2.2.5",
-    "mocha-babel": "3.0.0"
+    "webpack": "1.12.1"
   },
   "keywords": [
     "under",
