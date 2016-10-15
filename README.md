@@ -5,7 +5,7 @@ An SDK to wrap UA's Connected Fitness APIs.
 
 ## Installation
 
-  `npm install uasdk-js`
+  `npm install uacf-sdk`
 
 ## Usage
 
